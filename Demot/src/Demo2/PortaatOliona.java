@@ -1,5 +1,4 @@
-package demo2;
-
+package Demo2;
 
 import fi.jyu.mit.graphics.ControlButtons;
 import fi.jyu.mit.graphics.ControllerFrame;
