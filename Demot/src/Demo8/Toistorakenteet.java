@@ -11,29 +11,44 @@ public class Toistorakenteet {
 
 
 /**
+ * @param kysyLuvut 
+ * @param string 
  * @param luku 
- */
-public static void kysyLuvut(double [] luku) {
-	
-	
-	for (int i = 0; i < luvut.length; i++) {
-		System.out.println("Anna kolme lukua");
-		luku [i] = kysymys.nextDouble();
-	}
-	
 
+ */
+public static  void kysyLuvut(String kysyLuvut) {
+    Scanner kysymys = new Scanner(System.in);
+
+    System.out.println(kysyLuvut);
+    double numero = kysymys.nextDouble();
+
+    double [] luvut = new double[2];
+
+
+    for (int i = 0 ; i < 2; i++ ) {
+       luvut[i] = kysymys.nextDouble();
+    }
+
+
+    System.out.println(luvut);
+    kysymys.close();
 
 }
+
+
+
+
+	
+
+
 
 
 /**
  * @param args ei käytössä
  */
 public static void main(String[] args){
-	Scanner kysymys = new Scanner(System.in);
-	System.out.println("Anna kolme lukua");
-	double [] luvut = new double[5];
 
+	 kysyLuvut("Anna kolme lukua");
 }
 
 
