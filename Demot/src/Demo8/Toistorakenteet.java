@@ -29,18 +29,13 @@ public static  void kysyLuvut(String kysyLuvut) {
        luvut[i] = kysymys.nextDouble();
     }
 
-
-    System.out.println(luvut);
+    for (double i : luvut) {
+    System.out.println(i);
+    
+    }
     kysymys.close();
 
 }
-
-
-
-
-	
-
-
 
 
 /**
