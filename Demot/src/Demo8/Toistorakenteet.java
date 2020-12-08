@@ -11,16 +11,16 @@ public class Toistorakenteet {
 
 
 /**
- * @param kysyLuvut 
- * @param string 
- * @param luku 
+ * @param kysyLuvut tulee pääohjelmasta
+ * Scanner luokka pyytää käyttäjältä 3:n luvun syötön 
+ * ja tallentaa sen taulukkoon
 
  */
 public static  void kysyLuvut(String kysyLuvut) {
     Scanner kysymys = new Scanner(System.in);
 
     System.out.println(kysyLuvut);
-    double numero = kysymys.nextDouble();
+    double numero = kysymys.nextDouble(); //jotain on vialla koska ensimmäistä lukua ei tallenneta
 
     double [] luvut = new double[2];
 
