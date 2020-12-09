@@ -7,48 +7,50 @@ package Demo8;
 public class vuodenaikaFunktio {
 	  
 	 
-    private static final String [][] kuut =
-       { {"tammi", "helmi","maalis","huhti", "kes�", "syys",},
-         {"talvi", "talvi", "kev�t", "kev�t", "kes�", "syksy"}
+    private static final String [][] kuukaudetVuodenajat =
+       { {"tammi", "helmi","maalis","huhti", "kesä", "syys",},
+         {"talvi", "talvi", "kevät", "kevät", "kesä", "syksy"}
        };      
     
     /**
      * Palauttaa kuukauden nime� vastaavan vuodenajan tekstin�
-     * @param knimi kuukauden nimi
-     * @return vuodenaika tekstin�
+     * @param kuukausi 
+     * @return vuodenaika tekstinä
      * @example
      * <pre name="test">
      * vuodenaika("tammi") === "talvi";
      * vuodenaika("helmi") === "talvi";
-     * vuodenaika("maalis") === "kev�t";
-     * vuodenaika("kes�") === "kes�";
-     * vuodenaika("huhti") === "kev�t";
+     * vuodenaika("maalis") === "kevät";
+     * vuodenaika("kesä") === "kesä";
+     * vuodenaika("huhti") === "kevät";
      * vuodenaika("syys") === "syksy";
      * vuodenaika("m�t�") === "???";
      * </pre>
      */
     
+    //Funktiomalli luennolta
     
-    
-    public static String vuodenaika( String knimi) {
+    public static String vuodenaika( String kuukausi) {
             
-        for (int i = 0; i < kuut[0].length; i++)
-          if (kuut[0][i].equalsIgnoreCase(knimi))
-              return kuut[1][i];
+        for (int i = 0; i < kuukaudetVuodenajat[0].length; i++)
+          if (kuukaudetVuodenajat[0][i].equalsIgnoreCase(kuukausi))
+              return kuukaudetVuodenajat[1][i];
 
 
 
         return "???";
     }
+    
+    public static
 
     /**
      * @param args
      */
     public static void main(String[] args) {
-        String kNimi = "helmi"; //Tullut netist�, tiedostosta tai jostain muualta
-        String vaika;
-        vaika = vuodenaika(kNimi);
-        System.out.println("Kuukausi on " + kNimi + "kuu, " + "Nyt on siis " + vaika);
+        String kuukausi = "Tammi"; 
+        String vuodenaika;
+        vuodenaika = vuodenaika(kuukausi);
+        System.out.println("Kuukausi on " + kuukausi + "kuu, " + "Nyt on siis " + vuodenaika);
     }
 
 }
