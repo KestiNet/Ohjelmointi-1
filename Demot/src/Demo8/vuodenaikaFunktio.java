@@ -41,7 +41,55 @@ public class vuodenaikaFunktio {
         return "???";
     }
     
-    public static
+    
+    
+    /**
+     * @param kuukausi2
+     * @return null
+     */
+    public static String vuodenAika2(String kuukausi2) {
+    	for (int i = 0; i < kuukaudetVuodenajat[][i].length(); i++)
+    	
+    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    		return "Talvi";
+    	
+    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    		return "Talvi";
+    	
+    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    		return "Kevät";
+    	
+    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    		return "Kevät";
+    	
+    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    		return "Kevät";
+    	
+    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    		return "Kesä";
+    	
+    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    		return "Kesä";
+    	
+    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    		return "Kesä";
+    	
+    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    		return "Syksy";
+    	
+    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    		return "Syksi";
+    	
+    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    		return "Syksy";
+    	
+    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    		return "Talvi";
+    	else
+		return null;
+    }
+    	
+    
 
     /**
      * @param args
@@ -51,6 +99,10 @@ public class vuodenaikaFunktio {
         String vuodenaika;
         vuodenaika = vuodenaika(kuukausi);
         System.out.println("Kuukausi on " + kuukausi + "kuu, " + "Nyt on siis " + vuodenaika);
+        
+       
+        String kuukausi2 = "kesä";
+        System.out.println("Kuukausi on:  "  +  kuukausi2 + " Nyt on: " + vuodenAika2(kuukausi2));
     }
 
 }
