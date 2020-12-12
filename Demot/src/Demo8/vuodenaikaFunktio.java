@@ -48,45 +48,46 @@ public class vuodenaikaFunktio {
      * @return null
      */
     public static String vuodenAika2(String kuukausi2) {
-    	for (int i = 0; i < kuukaudetVuodenajat[][i].length(); i++)
     	
-    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    	if (kuukausi2.equalsIgnoreCase("Tammikuu")) 
     		return "Talvi";
     	
-    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    	else if(kuukausi2.equalsIgnoreCase("Helmikuu")) 
     		return "Talvi";
     	
-    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    	else if(kuukausi2.equalsIgnoreCase("Maaliskuu")) 
     		return "Kevät";
     	
-    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    	else if(kuukausi2.equalsIgnoreCase("Huhtikuu")) 
     		return "Kevät";
     	
-    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    	else if(kuukausi2.equalsIgnoreCase("Toukokuu")) 
     		return "Kevät";
     	
-    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    	else if(kuukausi2.equalsIgnoreCase("Kesäkuu")) 
     		return "Kesä";
     	
-    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    	else if(kuukausi2.equalsIgnoreCase("Heinäkuu")) 
     		return "Kesä";
     	
-    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    	else if(kuukausi2.equalsIgnoreCase("Elokuu")) 
     		return "Kesä";
     	
-    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    	else if(kuukausi2.equalsIgnoreCase("Syyskuu")) 
     		return "Syksy";
     	
-    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
-    		return "Syksi";
-    	
-    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    	else if(kuukausi2.equalsIgnoreCase("Lokakuu")) 
     		return "Syksy";
     	
-    	if (kuukausi2.equalsIgnoreCase(kuukausi2))
+    	else if(kuukausi2.equalsIgnoreCase("Marraskuu")) 
+    		return "Syksy";
+    	
+    	else if(kuukausi2.equalsIgnoreCase("Joulukuu")) 
     		return "Talvi";
-    	else
+    	
+    	
 		return null;
+    	
     }
     	
     
@@ -95,14 +96,14 @@ public class vuodenaikaFunktio {
      * @param args
      */
     public static void main(String[] args) {
-        String kuukausi = "Tammi"; 
+        String kuukausi = "Kesä"; 
         String vuodenaika;
         vuodenaika = vuodenaika(kuukausi);
         System.out.println("Kuukausi on " + kuukausi + "kuu, " + "Nyt on siis " + vuodenaika);
         
        
-        String kuukausi2 = "kesä";
-        System.out.println("Kuukausi on:  "  +  kuukausi2 + " Nyt on: " + vuodenAika2(kuukausi2));
+        String kuukausi2 = "tammikuu";
+        System.out.println("Kuukausi on:  "  +  kuukausi2 + ","+ " nyt on: " + vuodenAika2(kuukausi2));
     }
 
 }
