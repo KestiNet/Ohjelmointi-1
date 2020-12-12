@@ -6,10 +6,11 @@ package Demo8;
  */
 public class vuodenaikaFunktio {
 	  
+	//taulukko täytetty kaikilla kuukausilla
 	 
     private static final String [][] kuukaudetVuodenajat =
-       { {"tammi", "helmi","maalis","huhti", "kesä", "syys",},
-         {"talvi", "talvi", "kevät", "kevät", "kesä", "syksy"}
+       { {"tammi","helmi","maalis","huhti","touko","kesä","heinä","elo","syys","loka","marras","joulu"},
+         {"talvi","talvi","kevät","kevät","kevät","kesä","kesä", "kesä","syksy","syksy", "syksy","talvi"}
        };      
     
     /**
@@ -28,7 +29,7 @@ public class vuodenaikaFunktio {
      * </pre>
      */
     
-    //Funktiomalli luennolta
+    //Funktiomalli luennolta, 
     
     public static String vuodenaika( String kuukausi) {
             
@@ -44,6 +45,8 @@ public class vuodenaikaFunktio {
     
     
     /**
+     * Vertaa kuukausi2 parametrinä tuotua arvoa, jos arvo vastaa 
+     * tiettyä kuukautta, palauttaa vastaavan vuodenajan
      * @param kuukausi2
      * @return null
      */
@@ -90,13 +93,78 @@ public class vuodenaikaFunktio {
     	
     }
     	
-    
+  
 
     /**
-     * @param args
+     * Switch funktio joka vertaa annettua parametriä kuukauteen ja palauttaa vastaavan kuukauden 
+     * vuoden ajan ja tulostaa sen
+     * @param kuukausi3
+     * @return vuodenaika
+     */
+    public static String vuodenAika3(String kuukausi3) {
+    	   String vuodenaika = "";
+    	   switch(vuodenaika) {
+    	      
+    	   case "tammikuu":
+    	         vuodenaika = "Talvi";
+    	         break;
+
+    	      case "helmikuu":
+     	         vuodenaika = "Talvi";
+     	         break;
+
+    	      case "maaliskuu":
+     	         vuodenaika = "Kevät";
+     	         break;
+
+    	      case "huhtikuu":
+     	         vuodenaika = "Kevät";
+     	         break;
+
+    	      case "toukokuu":
+     	         vuodenaika = "Kevät";
+     	         break;
+
+    	      case "kesäkuu":
+     	         vuodenaika = "Kesä";
+     	         break;
+     	         
+    	      case "heinäkuu":
+     	         vuodenaika = "Kesä";
+     	         break;
+    	     
+    	      case "elokuu":
+     	         vuodenaika = "Kesä";
+     	         break;
+    	      
+    	      case "syyskuu":
+     	         vuodenaika = "Syksy";
+     	         break;
+    	      
+    	      case "lokakuu":
+     	         vuodenaika = "Syksy";
+     	         break;
+    	      
+    	      case "marraskuu":
+     	         vuodenaika = "Syksy";
+     	         break;
+    	      
+    	      case "joulukuu":
+     	         vuodenaika = "Talvi";
+     	         break;
+
+    	      default:
+    	        vuodenaika = "Virheellinen arvo";
+    	   }
+    	   return vuodenaika;
+    	}
+
+
+	/**
+     * @param args ei käytössä
      */
     public static void main(String[] args) {
-        String kuukausi = "Kesä"; 
+        String kuukausi = "touko"; 
         String vuodenaika;
         vuodenaika = vuodenaika(kuukausi);
         System.out.println("Kuukausi on " + kuukausi + "kuu, " + "Nyt on siis " + vuodenaika);
@@ -104,6 +172,9 @@ public class vuodenaikaFunktio {
        
         String kuukausi2 = "tammikuu";
         System.out.println("Kuukausi on:  "  +  kuukausi2 + ","+ " nyt on: " + vuodenAika2(kuukausi2));
+        
+        String kuukausi3 = "joulukuu";
+        System.out.println("Kuukausi on:  "  +  kuukausi3 + ","+ " nyt on: " + vuodenAika2(kuukausi3));
     }
 
 }
