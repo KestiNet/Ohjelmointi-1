@@ -63,7 +63,7 @@ import fi.jyu.mit.ohj2.Tiedosto;
  * Sana: kissa
  *</pre>
  */
-public class Hirsipuupeli {
+public class hirsipuu {
     
     /**
      * Hirren osat taulukossa
@@ -231,7 +231,7 @@ public class Hirsipuupeli {
             String jono = Syotto.kysy("Anna kirjain");
             if (jono.length() == 0 )
                 continue;
-            if ( jono.equals("loppu"))
+            if (jono.equalsIgnoreCase("loppu"))     //lisätty equalsIgnoreCase, tämän jälkeen ei pitäisi olla merkitystä onko iso vai pieni kirjain
                 break;
 
             char kirjain = jono.charAt(0);
