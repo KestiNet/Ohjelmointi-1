@@ -32,7 +32,7 @@ public class karkausVuosi {
       karkausvuosi = false;
 
     if (karkausvuosi)
-      System.out.println("Vuosi: " + vuosi + " on karkausvuosi");
+      System.out.println("Vuosi: " + vuosi + " ON karkausvuosi");
     else
       System.out.println("Vuosi: " + vuosi + " EI ole  karkausvuosi");
   }
@@ -41,7 +41,7 @@ public class karkausVuosi {
 	 * @param args ei käytössä
 	 */
 	public static void main(String[] args) {
-		int vuosi = 1987;
+		int vuosi = 2036;
 		karkausvuosi(vuosi);
 
 		;
