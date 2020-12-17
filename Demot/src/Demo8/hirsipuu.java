@@ -3,6 +3,7 @@ package Demo8;
 
 
 import java.util.Random;
+import java.util.Scanner;
 
 import fi.jyu.mit.graphics.Axis;
 import fi.jyu.mit.graphics.BasicShape;
@@ -274,6 +275,10 @@ public class hirsipuu {
      */
     public static void main(String[] args) {
         
+    	Scanner ajaUudestaan = new Scanner(System.in);
+    	String vastaus;
+    	
+    	do {    //Lisätty Do-while silmukka joka kysyy pelaajalta, että haluaako pelata uudelleen ja kun vastaus on kyllä, peli alkaa alusta
         logo();        
         String sana = "kissa";
         String[] sanat = Tiedosto.lueNetista("http://luna.chydenius.fi/~vtorniko/kurssit/ohj1/luennot/luento15/sanat.txt");
@@ -281,6 +286,10 @@ public class hirsipuu {
             sana = arvo(sanat);
         pelaaPeli(sana);
         
+        System.out.println("Haluatko pelata uudestaan?");
+        vastaus = ajaUudestaan.next();
     }
-
+    	while (vastaus.equalsIgnoreCase("Kyllä"));
 }
+}
+    
