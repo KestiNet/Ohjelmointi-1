@@ -8,7 +8,7 @@ package Demo8;
 public class karkausVuosi {
 	
 	/**
-	 * Tarkistaa aluksi onko vuosi neljällä jaollinen, tarkistaa myös onko vuosisata ja onko vuosisata jaollinen 400, jos on silloin on karkausvuosi
+	 * Tarkistaa aluksi onko vuosi neljällä jaollinen, tarkistaa myös onko vuosisata ja onko vuosisata jaollinen 400, jos on silloin on karkausvuosi ja tulostaa sen.
 	 * 
 	 * @param vuosi
 	 */
