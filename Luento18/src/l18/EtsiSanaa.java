@@ -70,7 +70,7 @@ public class EtsiSanaa {
 			if (isoJono.startsWith(isoSana))
 				sanat.add(jono);
 }
-		return null;
+		return sanat;
 		
 	}
 
@@ -89,7 +89,7 @@ public class EtsiSanaa {
 			List<String> sanat = etsiSopivat(kaikkiSanat, sana);
 			int n = sanat.size();
 			if(n > 10)
-				System.out.println("näin alkavia sanoja oli yli 10 kappaletta" + n + " kappaletta");
+				System.out.println("näin alkavia sanoja oli yli 10 " + n + " kappaletta ");
 			else
 			tulostaRivit(sanat);
 		}
