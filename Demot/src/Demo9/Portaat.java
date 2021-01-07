@@ -1,9 +1,8 @@
 package Demo9;
 
-import java.awt.Color;
-
-import fi.jyu.mit.graphics.*;
-
+import fi.jyu.mit.graphics.Line;
+import fi.jyu.mit.graphics.RPoint;
+import fi.jyu.mit.graphics.Window;
 
 /**
  * @author esakesti
@@ -19,9 +18,10 @@ public class Portaat {
 	 * @param next 
 	 * @return null
 	 */
-	public static  RPoint porras(Window window, RPoint next) {
-		window.add(new Line(next, next)).setColor(Color.RED);		
-		return null;
+	public static RPoint porras(Window window, RPoint next) {
+		window.add(new Line(next, next));
+		return next;
+				
 	      
 	    }
 	  
@@ -34,10 +34,10 @@ public class Portaat {
 	 * @return null
 	 */
 	public static RPoint porrasAlas(Window window, RPoint next) {
-		window.add(new Line(next, next)).setColor(Color.RED);		
+		window.add(new Line(2, 2, 0, 0));	
 
 		
-		return null;
+		return next;
 	       
 	    }
 	    
