@@ -13,73 +13,11 @@ import java.util.List;
  */
 public class DynaamisetTietorakenteet4 {
 
-	/**
-     * Etsii tietorakenteesta missä sanassa on eniten valittuja kirjaimia
-     * @param sanat tietorakenne jossa merkkijonoja
-     * @param kirjain mitä haetaan
-     * @return jono missä eniten merkkejä
-     * @example
-     * <pre name="test">
-     * String[] sanat = {"koira", "syö", "muonaa", "ja", "tavaa", "javaa"};
-     * etsiEniten(sanat, 'a') === "tavaa";
-     * etsiEniten(sanat, 'z') === "";
-     * etsiEniten(sanat, 'r') === "koira";
-     * etsiEniten(sanat, 'v') === "tavaa";
-     * </pre>
-     */
-    public static String etsiEniten(String[] sanat, char kirjain) {
-        String parasSana = "";
-        int parasLkm = 0;
-        for ( String sana : sanat ) {
-            int lkm = laskeKirjaimet(sana, kirjain);
-            if (lkm > parasLkm) {
-                parasLkm = lkm;
-                parasSana = sana;
-            }
-                
-        }
-        return parasSana;
-    }
+
     
     /**
      * Etsii tietorakenteesta missä sanassa on eniten valittuja kirjaimia
-     * @param sanat tietorakenne jossa merkkijonoja
-     * @param kirjain mitä haetaan
-     * @return jono missä eniten merkkejä
-     * @example
-     * <pre name="test">
-     * #import java.util.ArrayList;
-     * #import java.util.List;
-     * List<String> sanat2 = new ArrayList<String>();
-     * sanat2.add("koira");
-     * sanat2.add("syö");
-     * sanat2.add("muonaa");
-     * sanat2.add("ja");
-     * sanat2.add("tavaa");
-     * sanat2.add("javaa");
-     * etsiEniten(sanat2, 'a') === "tavaa";
-     * etsiEniten(sanat2, 'z') === "";
-     * etsiEniten(sanat2, 'r') === "koira";
-     * etsiEniten(sanat2, 'v') === "tavaa";
-     * </pre>
-     */
-    public static String etsiEniten( Iterable<String> sanat, char kirjain) {
-        String parasSana = "";
-        int parasLkm = 0;
-        for ( String sana : sanat ) {            
-            //sanat.add("kana");   onnistuu, jos parametri on List; ei onnistu jo iterable
-            int lkm = laskeKirjaimet(sana, kirjain);
-            if (lkm > parasLkm) {
-                parasLkm = lkm;
-                parasSana = sana;
-            }                
-        }
-        return parasSana;
-    }
-    
-    
-    /**
-     * Etsii tietorakenteesta missä sanassa on eniten valittuja kirjaimia
+     * @param sanat2 
      * @param sanat tietorakenne jossa merkkijonoja
      * @param kirjain mitä haetaan
      * @return jono missä eniten merkkejä
@@ -101,11 +39,11 @@ public class DynaamisetTietorakenteet4 {
      *     
      * </pre>
      */
-    public static int etsiEnitenPaikka( List<String> sanat, char kirjain) {
+    public static int etsiPisinSana( List<String> sanat2) {
         int parasPaikka = -1;
         int parasLkm = 0;
-        for ( int i = 0; i < sanat.size(); i++ ) {            
-            String sana = sanat.get(i);
+        for ( int i = 0; i < sanat2.size(); i++ ) {            
+            String sana = sanat2.get(i);
             int lkm = laskeKirjaimet(sana, kirjain);
             if (lkm > parasLkm) {
                 parasLkm = lkm;
@@ -119,9 +57,7 @@ public class DynaamisetTietorakenteet4 {
      * @param args
      */
     public static void main(String[] args) {
-       String[] sanat = {"koira", "syö", "muonaa", "ja", "tavaa", "javaa"};
-       String sana = etsiEniten(sanat, 'a');
-       System.out.println(sana);
+      
        
        List<String> sanat2 = new ArrayList<String>();
        sanat2.add("koira");
@@ -131,7 +67,7 @@ public class DynaamisetTietorakenteet4 {
        sanat2.add("tavaa");
        sanat2.add("javaa");
        
-       String sana2 = etsiEniten(sanat2, 'a');
+       String sana2 = etsiPisinSana(sanat2);
        System.out.println(sana2);
        int lkm = sanat2.size();
        System.out.println(lkm);
@@ -151,7 +87,7 @@ public class DynaamisetTietorakenteet4 {
        sanat2.remove(sana2);
        System.out.println(sanat2);
        
-       int enitenPaikka = etsiEnitenPaikka(sanat2, 'a');
+    
        
        
     }

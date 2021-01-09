@@ -1,5 +1,6 @@
 package Demo9;
 
+import fi.jyu.mit.graphics.EasyWindow;
 import fi.jyu.mit.graphics.Line;
 import fi.jyu.mit.graphics.RPoint;
 import fi.jyu.mit.graphics.Window;
@@ -10,36 +11,21 @@ import fi.jyu.mit.graphics.Window;
  */
 public class Portaat {
 	
-	
-	  /**
-	 * @param window
-	 * @param x
-	 * @param y
-	 * @param next 
-	 * @return null
-	 */
-	public static RPoint porras(Window window, RPoint next) {
-		window.add(new Line(next, next));
-		return next;
-				
-	      
-	    }
-	  
-	  
-	  /**
-	 * @param window
-	 * @param next 
-	 * @param x
-	 * @param y
-	 * @return null
-	 */
-	public static RPoint porrasAlas(Window window, RPoint next) {
-		window.add(new Line(2, 2, 0, 0));	
 
-		
-		return next;
-	       
+	/**
+	 * @param window
+	 * @param next
+	 * @return next
+	 */
+	  public static RPoint porras(EasyWindow window,double x,double y) {
+	        window.addLine(x, y  , x  , y+1);
+	        window.addLine(x, y+1, x+1, y+1);
+			return null;
+	        
 	    }
+	    
+    
+    
 	    
 	    /**
 	     * @param args
@@ -47,21 +33,19 @@ public class Portaat {
 	    public static void main(String[] args) {
 	        Window window = new Window();
 	        window.scale(0,-1,10,10);
-	        RPoint next = new RPoint(0,0);
+	        RPoint next = new RPoint(2,2);
 	        next = porras(window,next);
-	        next = porras(window,next);
-	        next = porras(window,next);
-	        next = porras(window,next);
-	        next = porras(window,next);
-	        next = new RPoint(next.getX()-1,next.getY());
-	        next = porrasAlas(window,next);
-	        next = porrasAlas(window,next);
-	        next = porrasAlas(window,next);
-	        next = porrasAlas(window,next);
-	        next = porrasAlas(window,next);
+	 
 	        window.showWindow();
 	    }
 
+
+
+
+
+	
+
+	
 
 	
 }
