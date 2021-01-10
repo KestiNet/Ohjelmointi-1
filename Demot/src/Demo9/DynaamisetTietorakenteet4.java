@@ -1,9 +1,7 @@
 package Demo9;
 
-import static Demo7.Kirjaimet.laskeKirjaimet;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 
@@ -39,20 +37,23 @@ public class DynaamisetTietorakenteet4 {
      *     
      * </pre>
      */
-    public static int etsiPisinSana( List<String> sanat2) {
-        int parasPaikka = -1;
-        int parasLkm = 0;
-        for ( int i = 0; i < sanat2.size(); i++ ) {            
-            String sana = sanat2.get(i);
-            int lkm = laskeKirjaimet(sana, kirjain);
-            if (lkm > parasLkm) {
-                parasLkm = lkm;
-                parasPaikka = i;
-            }                
-        }
-        return parasPaikka;
-    }
-    
+    public static ArrayList<String> etsiPisinSana( List<String> sanat2) {
+        ArrayList<String> sana = new ArrayList<String>();
+
+    	int pisinSana = 0;
+          for (String toka : sanat2) {
+              int length = toka.length();
+              if (length > pisinSana) {
+                  pisinSana = length;
+                  sana.clear();
+              }
+              if (length == pisinSana) {
+                  sana.add(toka);
+              }
+          }
+          return sana;
+      }
+     
     /**
      * @param args
      */
@@ -67,26 +68,17 @@ public class DynaamisetTietorakenteet4 {
        sanat2.add("tavaa");
        sanat2.add("javaa");
        
-       String sana2 = etsiPisinSana(sanat2);
-       System.out.println(sana2);
-       int lkm = sanat2.size();
-       System.out.println(lkm);
-       Collections.sort(sanat2);
-       System.out.println(sanat2);
+       System.out.println("Listan pisin sana on: "+etsiPisinSana(sanat2));
        
-       int i = sanat2.indexOf("javaa");  // pienillä tavaa
-       if ( i < 0 ) {
-           System.out.println("Ei löydy");
-           return;
-       }
-       
-       sana2 = sana2.toUpperCase();
-       sanat2.set(i, sana2);
+     
        
        System.out.println(sanat2);
-       sanat2.remove(sana2);
+       sanat2.remove(sanat2);
        System.out.println(sanat2);
+
        
+
+
     
        
        
