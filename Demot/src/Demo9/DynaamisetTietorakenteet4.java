@@ -67,10 +67,15 @@ public class DynaamisetTietorakenteet4 {
        sanat2.add("ja");
        sanat2.add("tavaa");
        sanat2.add("javaa");
+       
+       ArrayList<String> poisto = etsiPisinSana(sanat2);
+       
+       
        System.out.println("Listan pisin sana on: "+etsiPisinSana(sanat2));
 
+     sanat2.remove(poisto);
      
-       sanat2.remove("muonaa");
+       
        
        
        System.out.println(sanat2);
