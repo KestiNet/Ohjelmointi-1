@@ -1,90 +1,65 @@
 package Demo9;
 
-
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-
-
 /**
- * @author esakesti
- *
+ * laskee listasta missä sanassa on eniten valittuja kirjaimia
+ * @author veli.tornikoski
+ * @version 13.4.2020
  */
 public class DynaamisetTietorakenteet4 {
-
-
     
+   
     /**
-     * Etsii tietorakenteesta missä sanassa on eniten valittuja kirjaimia
-     * @param sanat2 
-     * @param sanat tietorakenne jossa merkkijonoja
-     * @param kirjain mitä haetaan
-     * @return jono missä eniten merkkejä
-     * @example
-     * <pre name="test">
-     * #import java.util.ArrayList;
-     * #import java.util.List;
-     * List<String> sanat2 = new ArrayList<String>();
-     * etsiEnitenPaikka(sanat2, 'a') === -1;
-     * sanat2.add("koira");
-     * etsiEnitenPaikka(sanat2, 'a') === 0;
-     * sanat2.add("syö");
-     * sanat2.add("muonaa");
-     * etsiEnitenPaikka(sanat2, 'a') === 2;
-     * sanat2.add("ja");
-     * etsiEnitenPaikka(sanat2, 's') === 1;
-     * sanat2.add("tavaa");
-     * sanat2.add("javaa");
-     *     
-     * </pre>
+     * @param sanat
+     * @param kirjain
+     * @return parasSana
      */
-    public static ArrayList<String> etsiPisinSana( List<String> sanat2) {
-        ArrayList<String> sana = new ArrayList<String>();
+    public static String etsiEniten(List<String> sanat) {
+        String parasSana = "";
+        int parasLkm = 0;
+        for ( String sana : sanat ) {
+            int lkm = sana.length();
+            if (lkm > parasLkm) {
+                parasLkm = lkm;
+                parasSana = sana;
+            }
+                
+        }
+        return parasSana;
+    }
+    
 
-    	int pisinSana = 0;
-          for (String toka : sanat2) {
-              int length = toka.length();
-              if (length > pisinSana) {
-                  pisinSana = length;
-                  sana.clear();
-              }
-              if (length == pisinSana) {
-                  sana.add(toka);
-              }
-          }
-          return sana;
-      }
-     
+
     /**
      * @param args
      */
     public static void main(String[] args) {
-      
+   
        
-       List<String> sanat2 = new ArrayList<String>();
-       sanat2.add("koira");
-       sanat2.add("syö");
-       sanat2.add("muonaa");
-       sanat2.add("ja");
-       sanat2.add("tavaa");
-       sanat2.add("javaa");
+       List<String> sanat = new ArrayList<String>();
+       sanat.add("koira");
+       sanat.add("syö");
+       sanat.add("muonaa");
+       sanat.add("jatekeevaikka");
+       sanat.add("tavaa");
+       sanat.add("javaa");
        
-       ArrayList<String> poisto = etsiPisinSana(sanat2);
+       String sana2 = etsiEniten(sanat);
+       Collections.sort(sanat);
+       
+       int i = sanat.indexOf("javaa");  
+       if ( i < 0 ) {
+           System.out.println("Ei löydy");
+           return;
+       }
        
        
-       System.out.println("Listan pisin sana on: "+etsiPisinSana(sanat2));
-
-     sanat2.remove(poisto);
-     
+       System.out.println(sanat);
+       sanat.remove(sana2);
+       System.out.println(sanat);
        
-       
-       
-       System.out.println(sanat2);
-
-
-       
-
-
-    
        
        
     }
