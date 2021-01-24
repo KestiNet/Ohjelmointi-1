@@ -43,6 +43,7 @@ public class DynaamisetTietorakenteet4 {
        sanat.add("syö");
        sanat.add("muonaa");
        sanat.add("jatekeevaikka");
+       sanat.add("jatekeevaikka");
        sanat.add("tavaa");
        sanat.add("javaa");
        
