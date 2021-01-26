@@ -4,17 +4,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 /**
- * laskee listasta missä sanassa on eniten valittuja kirjaimia
- * @author veli.tornikoski
- * @version 13.4.2020
+ * 
+ * @author Esa Kesti
+ * @version 20.01.2021
  */
 public class DynaamisetTietorakenteet4 {
     
    
     /**
-     * @param sanat
-     * @param kirjain
-     * @return parasSana
+     * @param sanat lista pääohjelmasta, tarkistetaan missä sanassa on eniten kirjaimia 
+     * @return ja palautetaan parasSana
      */
     public static String etsiEniten(List<String> sanat) {
         String parasSana = "";
@@ -34,6 +33,8 @@ public class DynaamisetTietorakenteet4 {
 
     /**
      * @param args
+     * lisätään lista tietorakenteeseen sanoja joista lasketaan aliohjelmassa pisin 
+     * poistetaan pisin sana tietorakenteesta.
      */
     public static void main(String[] args) {
    

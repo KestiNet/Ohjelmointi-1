@@ -81,7 +81,7 @@ public class DynaamisetTietorakenteet5 {
        sanat.remove(sana2);
        System.out.println(sanat);
        
-       kopioi(sanat, 6);
+       kopioi(sanat, 3);
        
     }
 

@@ -9,43 +9,62 @@ import fi.jyu.mit.graphics.Window;
  * @author esakesti
  *
  */
+
+
+
 public class Portaat {
-	
 
-	/**
-	 * @param window
-	 * @param next
-	 * @return next
-	 */
-	  public static RPoint porras(EasyWindow window,double x,double y) {
-	        window.addLine(x, y  , x  , y+1);
-	        window.addLine(x, y+1, x+1, y+1);
-			return null;
-	        
-	    }
-	    
+  
+    /**
+     * @param window
+     * @param next 
+     * @param x
+     * @param y
+     * @return next
+     */
+    public static RPoint porras(EasyWindow window, RPoint next) {
+        double x = 0;
+        double y = 0;
+    	window.addLine(x, y  , x  , y+1);
+        window.addLine(x, y+1, x+1, y+1);
+		return next;
+    }
     
     
-	    
-	    /**
-	     * @param args
-	     */
-	    public static void main(String[] args) {
-	        Window window = new Window();
-	        window.scale(0,-1,10,10);
-	        RPoint next = new RPoint(2,2);
-	        next = porras(window,next);
-	 
-	        window.showWindow();
-	    }
 
+    /**
+     * @param window
+     * @param next
+     * @return next
+     */
+    public static RPoint porrasAlas(EasyWindow window, RPoint next) {
+        double x = 0;
+        double y = 0;
+    	window.addLine(x, y  , x  , y+1);
+        window.addLine(x, y+1, x+1, y+1);
+		return next;
+    }
+    
+    
+    /**
+     * @param args ei k�yt�ss�
+     */
+    public static void main(String[] args) {
+        EasyWindow window = new EasyWindow();
+        window.scale(0,-1,10,10);
+        RPoint next = new RPoint(0,0);
+        next = porras(window,next);
+        next = porras(window,next);
+        next = porras(window,next);
+        next = porras(window,next);
+        next = porras(window,next);
+        next = new RPoint(next.getX()-1,next.getY());
+        next = porrasAlas(window,next);
+        next = porrasAlas(window,next);
+        next = porrasAlas(window,next);
+        next = porrasAlas(window,next);
+        next = porrasAlas(window,next);
+        window.showWindow();
+    }
 
-
-
-
-	
-
-	
-
-	
 }
