@@ -1,5 +1,10 @@
 package Demo9;
 
+
+
+import java.awt.Color;
+
+import fi.jyu.mit.graphics.Drawable;
 import fi.jyu.mit.graphics.EasyWindow;
 import fi.jyu.mit.graphics.Line;
 import fi.jyu.mit.graphics.RPoint;
@@ -22,12 +27,11 @@ public class Portaat {
      * @param y
      * @return next
      */
-    public static RPoint porras(EasyWindow window, RPoint next) {
-        double x = 0;
-        double y = 0;
-    	window.addLine(x, y  , x  , y+1);
-        window.addLine(x, y+1, x+1, y+1);
-		return next;
+    public static RPoint porras(Window window, RPoint next) {
+    	Drawable kuvio = window.add(new Line(next, next));
+ 		return next;
+
+
     }
     
     
@@ -40,8 +44,8 @@ public class Portaat {
     public static RPoint porrasAlas(EasyWindow window, RPoint next) {
         double x = 0;
         double y = 0;
-    	window.addLine(x, y  , x  , y+1);
-        window.addLine(x, y+1, x+1, y+1);
+    	window.addLine(x, y  , x  , y-1);
+        window.addLine(x, y+1, x+1, y-1);
 		return next;
     }
     
@@ -66,5 +70,9 @@ public class Portaat {
         next = porrasAlas(window,next);
         window.showWindow();
     }
+
+
+
+	
 
 }
