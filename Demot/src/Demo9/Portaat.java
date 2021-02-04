@@ -27,32 +27,40 @@ public class Portaat {
      * @param y
      * @return 
      */
-    public static RPoint porras(Window window, RPoint next) {
-        double x ;
-		double y;
-		next.set(x, y);
+    public static RPoint porras(EasyWindow window, RPoint next) {
+       double x = next.getX();
+       double y = next.getY();
 		
-		Drawable kuvio = window.add(new Line(x, y));
+       window.addLine(x, y  , x  , y+1);
+       window.addLine(x, y+1, x+1, y+1);
 		
+       next = new RPoint(next.getX()+1,next.getY()+1);
+
 		
 		return next;
 
     }
     
     
-
     /**
      * @param window
      * @param next
      * @return next
      */
     public static RPoint porrasAlas(EasyWindow window, RPoint next) {
-        double x = 0;
-        double y = 0;
-    	window.addLine(x, y  , x  , y-1);
+        double x = next.getX();
+        double y = next.getY();
+ 		
+        window.addLine(x, y  , x  , y-1);
         window.addLine(x, y+1, x+1, y-1);
-		return next;
-    }
+ 		
+        next = new RPoint(next.getX(),next.getY());
+
+ 		
+ 		return next;
+
+     }
+
     
     
     /**
@@ -67,7 +75,7 @@ public class Portaat {
         next = porras(window,next);
         next = porras(window,next);
         next = porras(window,next);
-        next = new RPoint(next.getX()-1,next.getY());
+        //next = new RPoint(next.getX()-1,next.getY());
         next = porrasAlas(window,next);
         next = porrasAlas(window,next);
         next = porrasAlas(window,next);
