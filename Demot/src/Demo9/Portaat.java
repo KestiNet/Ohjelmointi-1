@@ -25,12 +25,17 @@ public class Portaat {
      * @param next 
      * @param x
      * @param y
-     * @return next
+     * @return 
      */
     public static RPoint porras(Window window, RPoint next) {
-    	Drawable kuvio = window.add(new Line(next, next));
- 		return next;
-
+        double x ;
+		double y;
+		next.set(x, y);
+		
+		Drawable kuvio = window.add(new Line(x, y));
+		
+		
+		return next;
 
     }
     
