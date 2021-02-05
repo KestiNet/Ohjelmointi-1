@@ -52,7 +52,7 @@ public class Portaat {
         double y = next.getY();
  		
         window.addLine(x  , y  , x+1, y  );
-        window.addLine(x+1, y  , x+1, y-1);
+        window.addLine(x+1, y  , x-1, y-1);
  		
         next = new RPoint(next.getX(),next.getY());
  		
