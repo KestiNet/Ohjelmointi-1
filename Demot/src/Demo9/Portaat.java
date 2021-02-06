@@ -2,13 +2,8 @@ package Demo9;
 
 
 
-import java.awt.Color;
-
-import fi.jyu.mit.graphics.Drawable;
 import fi.jyu.mit.graphics.EasyWindow;
-import fi.jyu.mit.graphics.Line;
 import fi.jyu.mit.graphics.RPoint;
-import fi.jyu.mit.graphics.Window;
 
 /**
  * @author esakesti
@@ -51,12 +46,14 @@ public class Portaat {
         double x = next.getX();
         double y = next.getY();
  		
-        window.addLine(x  , y  , x+1, y  );
-        window.addLine(x+1, y  , x-1, y-1);
+        window.addLine(x+1  , y-1  , x+2, y-1  );
+        window.addLine(x+1, y  , x+1, y-1);
  		
-        next = new RPoint(next.getX(),next.getY());
+
+        next = new RPoint (next.getX(),next.getY());
  		
- 		return next;
+        return next;
+
 
      }
 
