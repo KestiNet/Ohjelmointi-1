@@ -16,11 +16,12 @@ public class Portaat {
 
   
     /**
+     * Tuo RPoint:in parametrinä aliohjelmaan ja piirtää viivoja koordinaattien mukaan.
      * @param window
      * @param next 
-     * @param x
-     * @param y
-     * @return 
+     * @param x hakee X arvon RPointista
+     * @param y hakee Y arvon RPointista
+     * @return palauttaa RPoint next arvon takaisin pääohjelmaan
      */
     public static RPoint porras(EasyWindow window, RPoint next) {
        double x = next.getX();
@@ -38,9 +39,12 @@ public class Portaat {
     
     
     /**
+     Tuo RPoint:in parametrinä aliohjelmaan ja piirtää viivoja koordinaattien mukaan.
      * @param window
-     * @param next
-     * @return next
+     * @param next 
+     * @param x hakee X arvon RPointista
+     * @param y hakee Y arvon RPointista
+     * @return palauttaa RPoint next arvon takaisin pääohjelmaan
      */
     public static RPoint porrasAlas(EasyWindow window, RPoint next) {
         double x = next.getX();
@@ -60,6 +64,7 @@ public class Portaat {
     
     
     /**
+     * Määrittelee pääohjelman
      * @param args ei käytössä
      */
     public static void main(String[] args) {
