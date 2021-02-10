@@ -8,9 +8,6 @@ import java.util.List;
 
 /**
  * @author esakesti
- * @param pallot 
- * @param rand 
- * @return 
  *
  */
 public class Lotto{
@@ -28,17 +25,26 @@ public static void main(String[] args) {
     }
     Collections.shuffle(pallot);
     for (int i=0; i<7; i++) {
-        System.out.println(pallot.get(i));
-    }
-    Collections.shuffle(pallot);
-    for (int i=0; i<3; i++) {
-    	System.out.println("Lisänumerot: " + pallot.get(i));
-    }
-}
-    // täytä pallot numeroilla 1-39, esim: pallot.add(4);
-    // sotke pallot  (ks. Collections)
-    // tulosta 7 ekaa "palloa"
-    // tulosta 3 seuraavaa palloa
     
     
+    System.out.println(pallot.get(i));
+    }
+    
+    ArrayList<Integer>lisänumerot = new ArrayList<Integer>();
+    for (int l=1; l<39; l++) {
+        lisänumerot.add(new Integer(l));
+    }
+    Collections.shuffle(lisänumerot);
+    for (int l=0; l < 3; l++) {
+    
+    
+    System.out.println("Lisänumerot on: " + lisänumerot.get(l));
+    }
+     }
+     
+
+  
+
 }
+
+  
