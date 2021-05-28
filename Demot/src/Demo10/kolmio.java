@@ -1,23 +1,42 @@
-package rek;
+package Demo10;
 
 
 import fi.jyu.mit.graphics.EasyWindow;
 
 /**
- * @author vesal
- * @version 17.8.2009
+ * @author Esa Kesti
+ * @version 28.5.2021
  */
 public class kolmio {
        
-       final static double PIENIN_KOLMIO = 5.00;
+       final static double alkuoksa = Math.PI/2;
+    
+       
        /**
-        * Piirtää Sierpinskin kolmion. Parametreina kolmion vasemman
-        * alakulman x- ja y-koordinaatit, sekä kolmoin korkeus.
-        * @param window ikkuna johon piirretään
-        * @param x kolmion vasemman kulman x-koordinaatti
-        * @param y kolmion vasemman kulman y-koordinaatti
-        * @param h kolmion korkeus
-        */
+     * @param window
+     * @param x
+     * @param y
+     * @param d
+     * @param l
+     */
+    public static void oksa(EasyWindow window, double x,double y,double d, double l) {
+       
+       window.addLine(x,y, x+l*Math.cos(d), Math.cos(d),y+l*Math.sin(d), l);
+       
+       
+       if (l < 2) return;
+       
+       oksa(window, x+l*Math.cos(d),y+l*Math.sin(d),d+0.6,l*0.6);
+       oksa(window, x+l*Math.cos(d),y+l*Math.sin(d),d-0.6,l*0.6);
+       oksa(window, x+l*Math.cos(d),y+l*Math.sin(d),d,l*0.3);
+       
+       
+       }
+       
+       
+       
+       
+       /**
        public static void sierpinskinKolmio(EasyWindow window, double x, 
                        double y, double h) {
                
@@ -36,7 +55,7 @@ public class kolmio {
                sierpinskinKolmio(window, x+s/4, y-h/2, h/2); //Yläkolmio
                sierpinskinKolmio(window, x+s/2, y, h/2); //Oikea alakolmio
        }
-       
+       */
        /**
         * Piirretään rekursiivinen kuvio
         * @param args ei käytössä
@@ -44,6 +63,6 @@ public class kolmio {
        public static void main(String[] args) {
                EasyWindow window = new EasyWindow();
                window.showWindow();
-               sierpinskinKolmio(window, 0, 200, 200);
+               oksa(window, 0, 200, 200, 0);
        }
 }
