@@ -8,8 +8,8 @@ package demo7;
 public class EtsiVA {
 	
 	private static final String [][] kuut = 
-		{{"tammi", "helmi", "maalis", "huhti"},
-		 {"talvi", "tavli", "kevät", "kevät",}
+		{{"tammi", "helmi", "maalis", "huhti","kesä", "syys"},
+		 {"talvi", "talvi", "kevät", "kevät", "kesä", "syksy"}
 		};
 	
 	
@@ -25,16 +25,18 @@ public class EtsiVA {
 	 * vuodenAika("maalis") === "kevät";
 	 * vuodenAika("huhti") === "kevät";
 	 * vuodenAika("syys") === "syksy";
+	 * vuodenAika("kesä") === "kesä";
 	 * vuodenAika("mätä") === "???";
 	 * </pre>
 	 * 
 	 */
 	public static String vuodenAika(String kNimi) {
+	
 		for(int i = 0; i < kuut[0].length; i++)
-			if (kuut[0][i].equals(kNimi))
+			if (kuut[0][i].equalsIgnoreCase(kNimi))
 				return kuut[1][i];
 		
-		return "";
+		return "???";
 	}
 	
 
