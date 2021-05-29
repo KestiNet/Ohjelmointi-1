@@ -50,7 +50,7 @@ public class KolmioPiirtoAWT {
    */
   public static void kolmio(Graphics g, double x, double y, double h)
   {
-    double s2 = h / (Math.sqrt(3));
+    double s2 = Math.PI/2;
 
     drawLine(g,x,y,x-s2,y-h);
     drawLine(g,x-s2,y-h,x+s2,y-h);
