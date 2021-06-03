@@ -8,29 +8,23 @@ import fi.jyu.mit.graphics.Window;
  *
  */
 public class OksaRekursio {
-    /** Raja pienimm�lle kolmiolle joka piirret��n */  
-    public static final double PIENIN_OKSA = 0.20;
+   
 
-    //private static long n = 0;
-
-    /**
-     * Piirret��n rekursiivisesti kolmioita
-     * @param ikkuna mihin kolmiot piirret��n
-     * @param x kolmion alak�rjen x
-     * @param y kolmion alak�rjen y
-     * @param d 
-     * @param l 
-     * @param h kolmion korkeus
-     */
+     
+	/**
+	 * Puun yksi oksa ja kolme muuta rekursiivisesti
+	 * @param ikkuna 
+	 * @param x oksan alkupiste
+	 * @param y oksan alkupiste
+	 * @param d oksan suunta radiaaneina
+	 * @param l oksan pituus
+	 */
     public static void oksa(Window ikkuna, double x, double y, double d, double l) {
-        double s2 =Math.PI/2;
         
-        ikkuna.add(new Line(x,y,x-s2,y-l));
-        ikkuna.add(new Line(x-s2,y-l,x+s2,y-l));
-        ikkuna.add(new Line(x+s2,y-l,x,y));
-        //n += 3;
-        
-        if ( l < PIENIN_OKSA ) return;
+        ikkuna.add(new Line(x,y, (x+l*Math.cos(d)),y+l*Math.sin(d)));
+       
+    
+        if ( l < 2 ) return;
         
         oksa(ikkuna, x+l*Math.cos(d),y+l*Math.sin(d),d+0.6,l*0.6);
         oksa(ikkuna, x+l*Math.cos(d),y+l*Math.sin(d),d-0.6,l*0.6);
@@ -38,12 +32,12 @@ public class OksaRekursio {
     }
     
     /**
-     * @param args ei k�yt�ss�
+     * @param args ei käytössä
      */
     public static void main(String[] args) {
-        Window ikkuna = new Window(600,500);
+        Window ikkuna = new Window(1000,1000);
         ikkuna.showWindow();
-        oksa(ikkuna,300,450,200,200);
+        oksa(ikkuna,Math.PI/2,1500,50,500);
                 
 
     }
