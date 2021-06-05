@@ -3,7 +3,7 @@ package Demo10;
 
 import fi.jyu.mit.ohj2.Tiedosto;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 /**
@@ -13,20 +13,27 @@ import java.util.List;
  *
  */
 public class Valuuttakurssit {
-
-	 
+	
+	/**
+	 * Tulostaa valuutat.csv tiedoston 
+	 * @param rivit 
+	 * 
+	 */
+	public static void tulostaValuutat(List<String> rivit) {
+		for(String rivi : rivit) {
+			System.out.println(rivi);
+		}
+	}
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		 List<String>rivit = Tiedosto.lueTiedostoListaan("valuutat.csv");
-	
-		
-		for (String rivi : rivit) {
-	         System.out.println(rivi);
+		 
+		 tulostaValuutat(rivit);
 		}
-	}
-
+	
 }
 
-	
+
+
