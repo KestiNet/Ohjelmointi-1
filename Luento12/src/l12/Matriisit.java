@@ -21,7 +21,7 @@ public class Matriisit {
     
     /**
      * tulostaa matriisin
-     * @param matriisi tulostettava matriisi
+     * @param matriisi tulostettava matriisit
      */
     public static void tulosta2(int[][] matriisi) {
         for (int ir = 0; ir < matriisi.length; ir++) {
