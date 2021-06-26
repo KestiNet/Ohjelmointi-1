@@ -30,15 +30,15 @@ public static void main(String[] args) {
     System.out.println(pallot.get(i));
     }
     
-    ArrayList<Integer>lis√§numerot = new ArrayList<Integer>();
+    ArrayList<Integer>lis‰numerot = new ArrayList<Integer>();
     for (int l=1; l<39; l++) {
-        lis√§numerot.add(new Integer(l));
+        lis‰numerot.add(new Integer(l));
     }
-    Collections.shuffle(lis√§numerot);
+    Collections.shuffle(lis‰numerot);
     for (int l=0; l < 3; l++) {
     
     
-    System.out.println("Lis√§numerot on: " + lis√§numerot.get(l));
+    System.out.println("Lis‰numerot on: " + lis‰numerot.get(l));
     }
      }
      
