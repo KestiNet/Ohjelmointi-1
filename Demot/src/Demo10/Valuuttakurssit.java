@@ -3,8 +3,7 @@ package Demo10;
 
 import fi.jyu.mit.ohj2.*;
 import java.util.Scanner;
-
-
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,22 +18,26 @@ public class Valuuttakurssit {
 	 * Tulostaa valuutat.csv tiedoston 
 	 * @param rivit 
 	 * 
+	 * 
 	 */
-	public static void tulostaValuutat(List<String> rivit) {
-		String syote = Syotto.kysy("anna valuuttakurssi: ");
-		String valuutta = syote.toString();
-		
-		for(String rivi : rivit) {
-			System.out.println(rivi);
+	public static void tulostaValuutat(List<String>rivit) {
+		for (String raha : rivit) {
+			System.out.println(raha);
 		}
 	}
+	
 	/**
 	 * @param args
+	 */
+	
+	/**
+	 * Reads the CSV file to a list
+	 * 
 	 */
 	public static void main(String[] args) {
 		 List<String>rivit = Tiedosto.lueTiedostoListaan("commercialTransaction.csv");
 		 
-		 
+			
 		 
 		 tulostaValuutat(rivit);
 		}
