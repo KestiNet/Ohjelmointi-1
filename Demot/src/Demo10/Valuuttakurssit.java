@@ -20,11 +20,29 @@ public class Valuuttakurssit {
 	 * 
 	 * 
 	 */
-	public static void tulostaValuutat(List<String>rivit) {
-		for (String raha : rivit) {
-			System.out.println(raha);
+	
+	public static void tulostaKurssit(List<String> rivit) {
+		for (String rivi:rivit) {
+			System.out.println(rivi);
 		}
 	}
+	
+	public static List<String> valuuttakurssi(List<String> rivit, String vKurssi){
+		List<String> valuutat = new ArrayList<String>();
+		String isoValuutta = vKurssi.toUpperCase(); 
+			for (String arvo : rivit) {
+				String kArvo = arvo.toUpperCase();
+				
+				if (kArvo.startsWith(isoValuutta))
+					valuutat.add(arvo);
+			}
+			
+			return valuutat;
+		}
+		
+		
+	
+	
 	
 	/**
 	 * @param args
@@ -36,10 +54,18 @@ public class Valuuttakurssit {
 	 */
 	public static void main(String[] args) {
 		 List<String>rivit = Tiedosto.lueTiedostoListaan("commercialTransaction.csv");
+		 String vKurssi= "";
+			while (true) {
+				String kysymys = Syotto.kysy("Anna valuuttakurssi: ");
+				if(kysymys.length() == 0) break;
+				vKurssi += kysymys;
+				System.out.println("valuutta kurssi on: " + vKurssi);
+				List<String> sanat = valuuttakurssi(rivit, vKurssi);
+				
+				tulostaKurssit(sanat);
+			}
 		 
-			
-		 
-		 tulostaValuutat(rivit);
+		
 		}
 	
 }
