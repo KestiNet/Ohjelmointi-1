@@ -32,7 +32,7 @@ public class OksaRekursio {
     }
     
     /**
-     * @param args ei kÃ¤ytÃ¶ssÃ¤
+     * @param args ei käytössä
      */
     public static void main(String[] args) {
         Window ikkuna = new Window(1000,1000);

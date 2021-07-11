@@ -8,8 +8,8 @@ package Demo10;
 public class Kombinaatio {
 	
 	/**
-	 * @param n ensimm√§inen arvo p√§√§ohjelman long k:sta
-	 * @param k toinen arvo p√§√§ohjelman long k:sta
+	 * @param n ensimm‰inen arvo p‰‰ohjelman long k:sta
+	 * @param k toinen arvo p‰‰ohjelman long k:sta
 	 * @return kombinaation summan
 	 */
 	public static long kombi(int n, int k) {

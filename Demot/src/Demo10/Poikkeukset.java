@@ -21,7 +21,7 @@ public static double muutaJono(String muutaJono, double oletus) {
 		oletus = Double.parseDouble(muutaJono);
 	}
 		catch (NumberFormatException e) {
-		    System.out.println("V√§√§r√§ arvo mukana " + e.getMessage());
+		    System.out.println("V‰‰r‰ arvo mukana " + e.getMessage());
 }
 	
 	return oletus;

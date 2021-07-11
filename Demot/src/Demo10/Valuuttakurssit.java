@@ -49,7 +49,8 @@ public class Valuuttakurssit {
 	 */
 	
 	/**
-	 * Reads the CSV file to a list
+	 *Lukee CSV tiedoston listaan ja kysyy käyttäjältä valuuttakurssia
+	 *Jos käyttäjä antaa tyhjän arvon, ohjelma keskeytyy
 	 * 
 	 */
 	public static void main(String[] args) {
