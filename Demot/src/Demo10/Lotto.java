@@ -13,7 +13,7 @@ import java.util.List;
 public class Lotto{
 	
 /**
- * Luodaan uusi ArrayList pallot johon tulee 7 numeroa 39:stä 
+ * Luodaan uusi ArrayList pallot johon tulee 7 numeroa 39:stï¿½ 
  * sekoitetaan pallot
  * @param args
  */
@@ -30,17 +30,17 @@ public static void main(String[] args) {
     System.out.println(pallot.get(i));
     }
     
-    //Toinen arrayList johon tulee 3 lisänumeroa 39:stä
+    //Toinen arrayList johon tulee 3 lisï¿½numeroa 39:stï¿½
     
-    ArrayList<Integer>lisänumerot = new ArrayList<Integer>();
+    ArrayList<Integer>lisanumerot = new ArrayList<Integer>();
     for (int l=1; l<39; l++) {
-        lisänumerot.add(new Integer(l));
+        lisanumerot.add(new Integer(l));
     }
-    Collections.shuffle(lisänumerot);
+    Collections.shuffle(lisanumerot);
     for (int l=0; l < 3; l++) {
     
     
-    System.out.println("Lisänumerot on: " + lisänumerot.get(l));
+    System.out.println("LisÃ¤numerot on: " + lisanumerot.get(l));
     }
      }
      
