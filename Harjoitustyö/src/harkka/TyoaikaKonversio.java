@@ -63,7 +63,7 @@ public class TyoaikaKonversio {
      * Pyydetään käyttäjältä syöttöä tehdyistä desimaali tunneista
      * Syötetty tieto tallennetaan listaan Luvut
      * @param args ei käytössä
-     * Kutsutaan aliohjelmaa tulosta ja kokonaisluvut
+     * Kutsutaan aliohjelmaa tulosta ja kokonaisluvut.
      */
     public static void main(String[] args) {
         List<Double> luvut = new ArrayList<>();
