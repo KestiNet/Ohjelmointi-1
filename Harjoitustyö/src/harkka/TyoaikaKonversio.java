@@ -22,7 +22,7 @@ public class TyoaikaKonversio {
      * Muunnetaan desimaalityyppinen työaika tunneiksi ja minuuteiksi
      *
      */
-    public static void tulosta (List<Double>luvut) {
+    public static final void tulosta (List<Double>luvut) {
         for (double tulostaAika:luvut) {
 
             int tunnit = (int)(tulostaAika);
@@ -41,7 +41,7 @@ public class TyoaikaKonversio {
      * minuutit erotetaean syötetystä tiedosta minuutit ja muunnetaan se oikean aika muotoon
      * @param luvut listasta
      */
-    public static void kokonaisTyoaika(List<Double>luvut) {
+    public static final void kokonaisTyoaika(List<Double>luvut) {
         double sum = 0;
         for (Double summa : luvut) sum += summa;
 
