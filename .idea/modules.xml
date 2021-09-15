@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Demot/src/Demo 11 Mallitentti/Demo 11 Mallitentti.iml" filepath="$PROJECT_DIR$/Demot/src/Demo 11 Mallitentti/Demo 11 Mallitentti.iml" />
       <module fileurl="file://$PROJECT_DIR$/Harjoitustyö/Harjoitustyö.iml" filepath="$PROJECT_DIR$/Harjoitustyö/Harjoitustyö.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Ohjelmointi-1.iml" filepath="$PROJECT_DIR$/.idea/Ohjelmointi-1.iml" />
     </modules>
