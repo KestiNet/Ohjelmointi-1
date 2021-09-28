@@ -1,8 +1,8 @@
 package harkka;
 
-import java.util.ArrayList;
-import java.util.List;
 import fi.jyu.mit.ohj2.Syotto;
+import java.util.*;
+
 
 
 
@@ -43,19 +43,35 @@ public class TyoaikaKonversio {
      */
     public static final void kokonaisTyoaika(List<Double>luvut) {
         double sum = 0;
-        for (Double summa : luvut) sum += summa;
+        String vastaus;
+        boolean kylläEi;
+        Scanner in = new Scanner(System.in);
 
-           int tunnit = (int)(sum);
-           int minuutit = (int) ((sum*60) % 60);
+        System.out.println("Haluatko syöttää viikon tunnit käsin vai lukea tiedostosta?");
+        while(true) {
+            vastaus = in.nextLine().trim().toLowerCase();
+            if(vastaus.equalsIgnoreCase("Käsin")){
+                kylläEi = true;
+                for (Double summa : luvut) sum += summa;
 
-            System.out.printf("Viikon kokonaistyöaika: %d:%d",tunnit, minuutit);
-            System.out.println();
+                int tunnit = (int)(sum);
+                int minuutit = (int) ((sum*60) % 60);
 
-            int ruokaTunti = (tunnit -2);
-            int ruokaMinuutti = (minuutit - 30);
+                System.out.printf("Viikon kokonaistyöaika: %d:%d",tunnit, minuutit);
+                System.out.println();
 
-        System.out.printf("Viikon kokonaistyöaika ruokatunnit poislukien: %d:%d",ruokaTunti, ruokaMinuutti);
-        System.out.println();
+                int ruokaTunti = (tunnit -2);
+                int ruokaMinuutti = (minuutit - 30);
+
+                System.out.printf("Viikon kokonaistyöaika ruokatunnit poislukien: %d:%d",ruokaTunti, ruokaMinuutti);
+                System.out.println();
+            }
+            else if(vastaus.equalsIgnoreCase("tiedostosta")) kylläEi = false;
+            System.out.println("Luetaan tiedostosta");
+        }
+
+
+
 
         }
 
