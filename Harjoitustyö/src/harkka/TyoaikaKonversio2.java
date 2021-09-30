@@ -2,9 +2,14 @@ package harkka;
 
 import fi.jyu.mit.ohj2.*;
 
+import java.io.BufferedReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class TyoaikaKonversio2 {
 
@@ -40,7 +45,6 @@ public class TyoaikaKonversio2 {
         System.out.println();
     }
 
-    public static
     /**
      * Pyydetään käyttäjältä syöttöä tehdyistä desimaali tunneista
      * Syötetty tieto tallennetaan listaan Luvut
@@ -75,9 +79,19 @@ public class TyoaikaKonversio2 {
                 break;
             } else if (vastaus.equalsIgnoreCase("tiedostosta")) kylläEi = false;
                   //System.out.println("Luetaan tiedostosta");
-                  List<String> tehdytTunnit = Tiedosto.lueTiedostoListaan("työaika.csv");
-                  tulosta(tehdytTunnit);
-                  kokonaisTyoaika(tehdytTunnit);
+                  List<Double> tehdytTunnit = new ArrayList<Double>();
+
+                  try (Stream<Double> tunti = Files.tunti(Paths.get("tyoaika.csv"))) {
+                   tehdytTunnit = tunti.collect(Collectors.toList());
+
+                      tulosta(tehdytTunnit);
+                      kokonaisTyoaika(tehdytTunnit);
+                   
+         
+                      }
+
+                  }
+                 
 
 
 
