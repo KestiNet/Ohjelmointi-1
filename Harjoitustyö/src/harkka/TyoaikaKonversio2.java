@@ -1,6 +1,6 @@
 package harkka;
 
-import fi.jyu.mit.ohj2.Syotto;
+import fi.jyu.mit.ohj2.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +40,7 @@ public class TyoaikaKonversio2 {
         System.out.println();
     }
 
+    public static
     /**
      * Pyydetään käyttäjältä syöttöä tehdyistä desimaali tunneista
      * Syötetty tieto tallennetaan listaan Luvut
@@ -73,7 +74,12 @@ public class TyoaikaKonversio2 {
                 kokonaisTyoaika(luvut);
                 break;
             } else if (vastaus.equalsIgnoreCase("tiedostosta")) kylläEi = false;
-            System.out.println("Luetaan tiedostosta");
+                  //System.out.println("Luetaan tiedostosta");
+                  List<String> tehdytTunnit = Tiedosto.lueTiedostoListaan("työaika.csv");
+                  tulosta(tehdytTunnit);
+                  kokonaisTyoaika(tehdytTunnit);
+
+
 
 
         }
