@@ -20,10 +20,9 @@ public class FinalTyoAikaKonversio {
     /**
      * @param luvut
      * @param tiedosto
-     * @param ajat
      */
     public static final void kokonaisTyoaika(List<Double>luvut, List<Double>tiedosto) {
-        double sum = 0;
+       double sum = 0;
         for (Double summa : luvut) sum += summa;
 
         int tunnit = (int)(sum);
@@ -38,9 +37,24 @@ public class FinalTyoAikaKonversio {
         System.out.printf("Viikon kokonaistyöaika ruokatunnit poislukien: %d:%d",ruokaTunti, ruokaMinuutti);
         System.out.println();
     }
+    public static void tiedostoTyoaika(List<Double>tiedosto) {
+        double totaali = 0;
+        for (Double luku : tiedosto) totaali += luku;
 
+        int tunnit = (int)(totaali);
+        int minuutit = (int) ((totaali*60) % 60);
+
+        System.out.printf("Viikon kokonaistyöaika: %d:%d",tunnit, minuutit);
+        System.out.println();
+
+        int ruokaTunti = (tunnit -2);
+        int ruokaMinuutti = (minuutit - 30);
+
+        System.out.printf("Viikon kokonaistyöaika ruokatunnit poislukien: %d:%d",ruokaTunti, ruokaMinuutti);
+        System.out.println();
+    }
     /**
-     * @param args
+     * @param args ei käytössä
      */
     public static void main(String[] args) {
         String kysy = Syotto.kysy("Haluatko syöttää tiedot käsin? K vai E?");
@@ -59,23 +73,21 @@ public class FinalTyoAikaKonversio {
 
             kokonaisTyoaika(luvut, null);
         }
-
-
         else {
             try {
                 List<Double> tiedosto = new ArrayList<>();
 
-                File csvFile = new File("/Users/esakesti/Documents/tyoaika.csv");
-                Scanner fileInput = new Scanner(csvFile);
+                File csvTiedosto = new File("/Users/esakesti/Documents/tyoaika.csv");
+                Scanner fileInput = new Scanner(csvTiedosto);
                 while (fileInput.hasNextLine()) {
-                    String contents = fileInput.nextLine();
-                    tiedosto.add(Double.parseDouble(contents));
-                    kokonaisTyoaika(tiedosto, null);
+                    String sisalto = fileInput.nextLine();
+                    tiedosto.add(Double.parseDouble(sisalto));
+                    tiedostoTyoaika(tiedosto);
 
                 }
 
             } catch (FileNotFoundException e) {
-                System.out.println("Ei oo tiedostoa\n");
+                System.out.println("Tiedosto ei saatavilla\n");
                 e.printStackTrace();
 
             }
