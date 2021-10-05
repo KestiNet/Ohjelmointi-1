@@ -82,10 +82,8 @@ public class FinalTyoAikaKonversio {
                 while (fileInput.hasNextLine()) {
                     String sisalto = fileInput.nextLine();
                     tiedosto.add(Double.parseDouble(sisalto));
-                    tiedostoTyoaika(tiedosto);
-
                 }
-
+                tiedostoTyoaika(tiedosto);
             } catch (FileNotFoundException e) {
                 System.out.println("Tiedosto ei saatavilla\n");
                 e.printStackTrace();
