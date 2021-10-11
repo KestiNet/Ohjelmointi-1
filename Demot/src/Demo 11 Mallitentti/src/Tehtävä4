@@ -1,10 +1,15 @@
-Boolean
+Boolean on tietotyyppi jolla voi olla kaksi arvoa, joko tosi tai epätosi (True or False)
 
-Char
+Char ilmaisee yhtä merkkiä joka voi olla mikä tahansa merkki
 
-int
+int on tietotyyppi joka ilmaisee kaikkia kokonaislukuja, desimaali luvut eivät voi olla int tyyppisiä
 
-Double
+Double on tietotyyppi joka ilmaisee liukulukuja
 
-oliomuuttuja
+oliomuuttuja on viite todelliseen olioon, ei ole itse olio.
+
+
+Aliohjelmakutsussa kutsutaan aliohjelmaa jolloin voidaan viedä tiettyjä parametrejä aliohjelmalle jossa tieto
+käsitellään lisää.
+
 
