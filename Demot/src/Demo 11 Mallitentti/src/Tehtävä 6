@@ -1,0 +1,17 @@
+a. Java ohjelma voidaan kääntää komentoriviltä ajamalla javac /tiedosto/polku/ohjelmaan , jos ohjelma tarvii jonkin kirjaston avuksi, se voidaan Windowsissa tehdä käyttämällä setpath metodia.
+
+b.
+
+c.
+
+d.
+
+e. Array on tietotyypi joka määritellään tietyn mittaiseksi, tämän määrittelyn jälkeen sitä ei enään voi muuttaa. ArrayList tietotyyppiä voidaan kuitenkin muuttaa myöhemmin.
+ArrayList:iin ei voida tallentaa primitiivejä, mutta Array:hin voidaan tallentaa sekä primitiivejä, että objekteja.
+
+f. String tietotyyppi on muuttumaton, kun taas StringBuilder on muuttuva. Tämä tarkoittaa, että StringBuilder:in merkkijonoja voidaan myöhemmässä vaiheessa muuttaa, tämä ei onnistu String tietotyypin kanssa.
+
+
+g. Javassa 34%7 = 6 ja 34/7 = 4
+
+h. Olio muuttuu roskaksi sen jälkeen kun sen käyttämään muistipaikkaan ei osoita enään mikään.
